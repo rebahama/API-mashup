@@ -1,0 +1,26 @@
+.NavBar {
+    font-size: 1rem;
+    font-weight: bold;
+    position: sticky;
+    z-index: 20;
+    top: 0;
+}
+/*Navbar links*/
+a:hover i {
+    color: #40E0D0;
+}
+.NavLink {
+    color: #000000;
+    padding: 5px;
+}
+i {
+    color: #000000;
+    font-size: 1.5rem;
+}
+a{
+    text-decoration: none;
+}
+/*For logo*/
+.BrandLogo i:hover {
+    color: #FFFF00;
+}
