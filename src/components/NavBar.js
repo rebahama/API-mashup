@@ -13,13 +13,14 @@ const NavBar = () => {
     <NavLink to="/"  className={styles.NavLink}>
     <Navbar.Brand className={`"ml-auto" ${styles.BrandLogo}`}> API </Navbar.Brand>
     </NavLink>
-  
+
+    <Container>
       <Nav className="me-auto">
-        <NavLink to="/hello"  className={styles.NavLink} > Home</NavLink>
-        <NavLink to="/homee"  className={styles.NavLink} > Another</NavLink>
+        <NavLink to="/"  className={styles.NavLink} > Home</NavLink>
+        <NavLink to="/movies"  className={styles.NavLink} > Movies </NavLink>
+        <NavLink to="/music"  className={styles.NavLink} > Music </NavLink>
       </Nav>
-    
-    
+      </Container>
   </Navbar>
   
 
