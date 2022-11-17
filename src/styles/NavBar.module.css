@@ -7,10 +7,10 @@
 }
 /*Navbar links*/
 a:hover i {
-    color: #40E0D0;
+    color: #000000;
 }
 .NavLink {
-    color: #000000;
+    color: #f4f4f4;
     padding: 5px;
 }
 i {
