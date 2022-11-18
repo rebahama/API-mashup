@@ -3,6 +3,7 @@ import axios from 'axios'
 import styles from '../styles/MoviePage.module.css';
 import { Container, Form} from 'react-bootstrap';
 import SpinnerBar from '../components/SpinnerBar';
+import MovieProps from './MovieProps';
 
 
 
@@ -40,8 +41,6 @@ const Movies = () => {
     return ()=>{
       clearTimeout(timer)
     }
-
-    
         
   }, [query])
 
@@ -54,14 +53,13 @@ const Movies = () => {
   <Container>
  <Form.Control type="text" className={styles.SearchBar}placeholder= "Search a review" value={query} onChange={(event) => setQuery(event.target.value)}  />
  
-
  </Container>     
           </Form>
 
 
     
      {loaded ? <> {movies && movies.map((movie)=>{
-      return <li key={movie.imdbID}> <p>{movie.Title}  </p> </li>})}</>
+      return <MovieProps key={movie.imdbID} {...movie}/>})}</>
       
       :<SpinnerBar/>} 
 
