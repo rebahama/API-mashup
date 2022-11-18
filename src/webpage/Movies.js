@@ -19,8 +19,8 @@ const Movies = () => {
     const handleData = async () => {
       try {
         const {data} = await axiosReq.get(baseUrl);
-        console.log(data.Search);
         setMovies(data.Search);
+       
         setLoaded(true);
       }
       
