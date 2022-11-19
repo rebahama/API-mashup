@@ -62,7 +62,9 @@ const Movies = () => {
       </>
       :<SpinnerBar/>}
 
-<p>{error}</p>
+<p></p>
+<p> {error}</p>
+<p> Found: {movies && movies.length> 0 ? movies.length:"0"} </p>
      
       
     </div>
