@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import styles from './App.module.css';
 import NavBar from './components/NavBar';
 import HomePage from './webpage/HomePage';
+import MovieDetail from './webpage/MovieDetail';
 import Movies from './webpage/Movies';
 import Music from './webpage/Music';
 
@@ -15,6 +16,7 @@ function App() {
      <Route exact path="/"  element={<HomePage />} />
      <Route exact path="/music"  element={<Music />} />
      <Route exact path="/movies"  element={<Movies />} />
+     <Route exact path="/moviedetails/:id"  element={<MovieDetail />} />
      </Routes>
      
     </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from '../styles/MoviePage.module.css';
 import { Card, Col, Container, Row } from 'react-bootstrap'
+import { Link } from 'react-router-dom';
 
 
 // Movie details: https://www.omdbapi.com/?apikey=41059430&i=tt1285016&type=movie
@@ -19,9 +20,12 @@ const MovieProps = (props) => {
                                     {Year}
 
                                     <a href={` https://www.imdb.com/title/${imdbID}`} target="_blanc">Read more</a>
+                                    
                                 </Card.Text>
+                                
 
                             </Card.Body>
+                            <Link to={`/moviedetails/${imdbID}`}> click here</Link>
                         </Card>
                     </Col>
                 </Row>

@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
 
 
 const MovieDetail = () => {
+    
+    const imdbID = useParams();
+    
     const axiosReq = axios.create();
-    const baseUrl = "https://www.omdbapi.com/?apikey=41059430&i=tt1285016&type=movie"
+    JSON.stringify(imdbID)
+   
+    const baseUrl = `https://www.omdbapi.com/?apikey=41059430&i=${imdbID.id}&type=movie`
     const [movies, setMovies] = useState([])
 
 
@@ -13,7 +19,10 @@ const MovieDetail = () => {
         const handleDetail = async () => {
             try {
                 const { data } = await axiosReq.get(baseUrl);
+            
                 console.log(data);
+               
+                console.log(`https://www.omdbapi.com/?apikey=41059430&i=${imdbID.id}&type=movie`)
                 setMovies(data)
             }
             catch (err) {
@@ -29,6 +38,7 @@ const MovieDetail = () => {
     <div>
          <p>{movies.Title}</p>
        {movies.Plot}
+       
 
     </div>
     )
