@@ -14,13 +14,15 @@ const Movies = () => {
   const [query, setQuery] = useState("revenant");
   const baseUrl = `https://www.omdbapi.com/?apikey=41059430&s=${query}&type=movie`
   const [movies, setMovies] = useState([]);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     const handleData = async () => {
       try {
         const {data} = await axiosReq.get(baseUrl);
         setMovies(data.Search);
-       
+       console.log(data.Error)
+       setError(data.Error)
         setLoaded(true);
       }
       
@@ -50,12 +52,20 @@ const Movies = () => {
   <Container>
  <Form.Control type="text" className={styles.SearchBar}placeholder= "Search a review" value={query} onChange={(event) => setQuery(event.target.value)}  />
 
- </Container>     
+ </Container>
+ <p> </p>  
           </Form>
           
      {loaded ? <> {movies && movies.map((movie)=>{
-      return  <MovieProps key={movie.imdbID} {...movie} />} )}</>
+      
+      return  <MovieProps key={movie.imdbID} {...movie} />} )}
+     
+      </>
       :<SpinnerBar/>}
+
+<p>{error}</p>
+     
+      
     </div>
   )
 }
