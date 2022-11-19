@@ -6,7 +6,6 @@ import SpinnerBar from '../components/SpinnerBar';
 import MovieProps from './MovieProps';
 
 
-
 const Movies = () => {
 
   const axiosReq = axios.create();
