@@ -31,11 +31,9 @@ const MovieProps = (props) => {
     }
 
     else if (Poster !== "N/A") {
-        return <Container>
-            <Row>
-                <Col md={4} className="offset-md-5">
+        return     <Col md={6} className="offset-md-5">
                     <Card className={styles.CardStyles}>
-                        <Card.Img variant="top" src={Poster}></Card.Img>
+                        <Card.Img variant="top" src={Poster}  ></Card.Img>
                         <Card.Body>
                             <Card.Title>{Title} {Year}</Card.Title>
                             <Card.Text>
@@ -45,8 +43,7 @@ const MovieProps = (props) => {
                         <Link to={`/moviedetails/${imdbID}`}> View more</Link>
                     </Card>
                 </Col>
-            </Row>
-        </Container>
+       
     }
 }
 
