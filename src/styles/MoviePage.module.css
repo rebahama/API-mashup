@@ -9,3 +9,11 @@
     margin: 20px;
     width: 15rem;
 }
+.grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+}
+.VideoStyle{
+    width: 100%;
+}

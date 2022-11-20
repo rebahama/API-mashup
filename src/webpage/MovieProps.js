@@ -1,7 +1,7 @@
 import React from 'react'
 import image from '../assets/placeholder.mp4'
 import styles from '../styles/MoviePage.module.css';
-import { Card, Col, Container, Row } from 'react-bootstrap'
+import { Card} from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 
 
@@ -12,11 +12,9 @@ const MovieProps = (props) => {
 
     if (Poster === "N/A") {
 
-        return <Container>
-            <Row>
-                <Col md={4} className="offset-md-5">
+        return   <div>
                     <Card className={styles.CardStyles}>
-                        <video variant="top" src={image} autoPlay loop muted playsInline> </video>
+                        <video variant="top" src={image} autoPlay loop muted playsInline className={styles.VideoStyle}> </video>
                         <Card.Body>
                             <Card.Title>{Title} {Year}</Card.Title>
                             <Card.Text>
@@ -25,13 +23,12 @@ const MovieProps = (props) => {
                         </Card.Body>
                         <Link to={`/moviedetails/${imdbID}`}> View more</Link>
                     </Card>
-                </Col>
-            </Row>
-        </Container>
+                </div>
+       
     }
 
     else if (Poster !== "N/A") {
-        return     <Col md={6} className="offset-md-5">
+        return     <div>
                     <Card className={styles.CardStyles}>
                         <Card.Img variant="top" src={Poster}  ></Card.Img>
                         <Card.Body>
@@ -42,7 +39,7 @@ const MovieProps = (props) => {
                         </Card.Body>
                         <Link to={`/moviedetails/${imdbID}`}> View more</Link>
                     </Card>
-                </Col>
+                </div>
        
     }
 }
