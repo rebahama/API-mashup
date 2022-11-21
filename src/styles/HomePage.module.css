@@ -1,0 +1,24 @@
+.MovieBtn{
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.MusicBtn{
+
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+}

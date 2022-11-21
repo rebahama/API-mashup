@@ -43,6 +43,7 @@ const MovieDetail = () => {
                   
                 
             <h2>{movies.Title}</h2>
+            <hr/>
                 <div className={styles.RatingContainer }>
                 
                 <img src={movies.Poster} alt="poster" />
@@ -54,6 +55,7 @@ const MovieDetail = () => {
                     <p> Length: {movies.Runtime}</p>
                     <p> Genre: {movies.Genre}</p>
                     <p> Rating: {movies.imdbRating}</p>
+                    <p> Director: {movies.Director}</p>
                     <a href={` https://www.imdb.com/title/${movies.imdbID}`} target="_blanc">Read more on imdb</a>
                     </div>
             </Container>
