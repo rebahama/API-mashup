@@ -34,7 +34,7 @@ const MovieProps = (props) => {
                         <Card.Body>
                             <Card.Title>{Title} {Year}</Card.Title>
                             <Card.Text>
-                                <a href={` https://www.imdb.com/title/${imdbID}`} target="_blanc">Read more on imdb</a>
+                               
                             </Card.Text>
                         </Card.Body>
                         <Link to={`/moviedetails/${imdbID}`}> View more</Link>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import styles from '../styles/MoviePage.module.css';
-import {Container, Form} from 'react-bootstrap';
+import { Container, Form } from 'react-bootstrap';
 import SpinnerBar from '../components/SpinnerBar';
 import MovieProps from './MovieProps';
 
@@ -56,13 +56,13 @@ const Movies = () => {
       </Form>
 
 
-      {loaded ? (<> 
-      
-      <div className={styles.grid}> {movies && movies.map((movie) => {
+      {loaded ? (<>
 
-        return <MovieProps key={movie.imdbID} {...movie} />
-      })}
-      </div>  </>): (<SpinnerBar />)}
+        <div className={styles.grid}> {movies && movies.map((movie) => {
+
+          return <MovieProps key={movie.imdbID} {...movie} />
+        })}
+        </div>  </>) : (<SpinnerBar />)}
 
 
       <p></p>
