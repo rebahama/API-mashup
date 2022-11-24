@@ -11,8 +11,8 @@ const Music = () => {
 
     const options = {
       method: 'GET',
-      url: 'https://shazam.p.rapidapi.com/songs/list-artist-top-tracks',
-      params: { id: '40008598', locale: 'en-US' },
+      url: 'https://shazam.p.rapidapi.com/search',
+      params: {term: 'billie jean', locale: 'en-US', offset: '0', limit: '5'},
       headers: {
         'X-RapidAPI-Key': '77677621eamshcb48954032d980dp1e8fc7jsn8735e2ae11b4',
         'X-RapidAPI-Host': 'shazam.p.rapidapi.com'
@@ -20,8 +20,8 @@ const Music = () => {
     };
 
     axios.request(options).then(function (response) {
-      console.log(response.data.tracks);
-      SetMusic(response.data.tracks)
+      console.log(response.data.tracks.hits);
+      SetMusic(response.data.tracks.hits)
       console.log(music)
 
     }).catch(function (error) {
@@ -38,7 +38,19 @@ const Music = () => {
 
     <div>
 
-    {music.length}
+    {music.map((musics)=>{
+
+      return <div key={musics.key}> 
+      
+      
+      <p> song name: {musics.snippet}</p>
+
+      <p> Artis: {musics.track.subtitle}</p>
+      <img src={musics.track.images.background} alt="artist avatar"></img>
+      
+      </div>
+
+    })}
 
   </div>
   )
