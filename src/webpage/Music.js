@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
+import { Container, Form, Button } from 'react-bootstrap';
+
 
 
 
 const Music = () => {
 
-
+  const [loaded, setLoaded] = useState(false);
   const [music, SetMusic] = useState([]);
   const [lyric, setLyrics] = useState("");
 
@@ -25,6 +27,7 @@ const Music = () => {
     axios.request(options).then(function (response) {
       console.log(response.data.tracks.hits);
       SetMusic(response.data.tracks.hits)
+     
       console.log(music)
 
     }).catch(function (error) {
@@ -33,32 +36,30 @@ const Music = () => {
     });
 
   }
+ 
 
 
   return (
 
     <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
+      <Container>
+      <Form onSubmit={handleSubmit}>
+        <Form.Control as="textarea"
           value={lyric}
           onChange={(e) => setLyrics(e.target.value)}
         />
-      </form>
+        <p> {lyric.length}/100</p>
+        <Button type="submit"> Search</Button>
+      </Form>
+      </Container>
       {music.map((musics) => {
-
+        
         return <div key={musics.track.key}>
-
-
           <p> song name: {musics.track.title}</p>
-
           <p> Artist: {musics.track.subtitle}</p>
           <img src={musics.track.images.background} alt="artist avatar"></img>
           <a href={musics.track.url} target='_blank'> Click here to hear song </a>
-
-        </div>
-
-      })}
+        </div>})}
 
     </div>
   )
