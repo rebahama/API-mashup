@@ -39,16 +39,14 @@ const MovieDetail = () => {
 
         <div>
             <Container className={styles.DetailContainer}>
-                
-                  
-                
+ 
             <h2>{movies.Title}</h2>
             <hr/>
                 <div className={styles.RatingContainer }>
-                
+
                 <img src={movies.Poster} alt="poster" />
                     <p className={styles.DescribeText}> {movies.Plot}</p>
-                    
+
                 </div>
             <div className={styles.DetailInfoContainer}>
                     <p>Year: {movies.Year}</p>

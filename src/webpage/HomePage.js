@@ -9,6 +9,7 @@ import { Container } from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel';
 
 
+
 const HomePage = () => {
   return (
     <Container>
@@ -32,7 +33,9 @@ const HomePage = () => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+      
     </Container>
+   
 
   )
 }
