@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className={styles.Footer}>
 
-                  <ul>
+                  <ul className={styles.FooterLinks}>
                         <li className="list-inline-item"><a href="https://sv-se.facebook.com/" target="_blank"rel=" noopener noreferrer"> Facebook<i
                               className="fa-brands fa-facebook"> </i></a></li>
                         <li className="list-inline-item"><a href="https://www.instagram.com/" target="_blank" rel=" noopener noreferrer"> Instagram<i

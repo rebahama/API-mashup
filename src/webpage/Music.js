@@ -25,7 +25,7 @@ const Music = () => {
 
 
   const handleSubmit = (event) => {
-
+    
     if(lyric===""){
       alert("Please type something in the field")
     }
