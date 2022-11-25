@@ -23,7 +23,16 @@ const Music = () => {
     }
   };
 
+
   const handleSubmit = (event) => {
+
+    if(lyric===""){
+      alert("Please type something in the field")
+    }
+    if(lyric.length>100){
+      alert("Maximum 100 charachters please")
+    }
+    else if(lyric!==""){
     event.preventDefault();
     axios.request(options).then(function (response) {
       console.log(response.data.tracks.hits);
@@ -35,9 +44,9 @@ const Music = () => {
 
       console.error(error);
     });
-
   }
- 
+  }
+
 
 
   return (
@@ -55,6 +64,7 @@ const Music = () => {
         <Button type="submit"> Search</Button>
       </Form>
       </Container>
+      <p> Found: {music.length} songs </p>
       {music.map((musics) => {
         
         return <div key={musics.track.key} className={styles.ArtistContainer}>
@@ -64,7 +74,9 @@ const Music = () => {
           <p> Song: {musics.track.title}</p>
           <p> Artist: {musics.track.subtitle}</p>
           <a href={musics.track.url} target='_blank' rel='noopener noreferrer'> Click here to hear song </a>
+          
           <hr/>
+         
         </div>})}
 
     </div>
