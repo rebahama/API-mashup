@@ -59,7 +59,7 @@ const Music = () => {
         
         return <div key={musics.track.key} className={styles.ArtistContainer}>
           
-          <img src={musics.track.images.background} alt="artist avatar" className={styles.ArtistAvatar}></img>
+          <img src={musics.track.images.background}  alt="artist avatar" className={styles.ArtistAvatar}></img>
           
           <p> Song: {musics.track.title}</p>
           <p> Artist: {musics.track.subtitle}</p>

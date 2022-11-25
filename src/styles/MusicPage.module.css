@@ -1,6 +1,7 @@
 .ArtistAvatar{
     border-radius: 200px;
     max-height: 400px;
+    margin-bottom: 20px;
 }
 .ArtistContainer {
     display: flex;
