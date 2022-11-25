@@ -26,8 +26,9 @@ const HomePage = () => {
         <Carousel.Item>
           <video variant="top" src={imagemusic} autoPlay loop muted playsInline> </video>
           <Carousel.Caption>
-            <p>Take me to the music search</p>
-            <NavLink to="/music" className={styles.MusicBtn} >Music </NavLink>
+           
+            <p>Try our lyric finder </p>
+            <NavLink to="/music" className={styles.MusicBtn} >Lyricfinder </NavLink>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

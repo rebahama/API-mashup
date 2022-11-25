@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import styles from '../styles/MusicPage.module.css';
 import axios from 'axios';
 import { Container, Form, Button } from 'react-bootstrap';
 
@@ -7,7 +8,7 @@ import { Container, Form, Button } from 'react-bootstrap';
 
 const Music = () => {
 
-  const [loaded, setLoaded] = useState(false);
+
   const [music, SetMusic] = useState([]);
   const [lyric, setLyrics] = useState("");
 
@@ -42,7 +43,9 @@ const Music = () => {
   return (
 
     <div>
+
       <Container>
+        <h2> Welcome to the lyric finder, type in atleast 5 sentences of a song and a list of possible songs will be displayed starting with the top being the most likely song that you are looking for</h2>
       <Form onSubmit={handleSubmit}>
         <Form.Control as="textarea"
           value={lyric}
@@ -54,11 +57,14 @@ const Music = () => {
       </Container>
       {music.map((musics) => {
         
-        return <div key={musics.track.key}>
-          <p> song name: {musics.track.title}</p>
+        return <div key={musics.track.key} className={styles.ArtistContainer}>
+          
+          <img src={musics.track.images.background} alt="artist avatar" className={styles.ArtistAvatar}></img>
+          
+          <p> Song: {musics.track.title}</p>
           <p> Artist: {musics.track.subtitle}</p>
-          <img src={musics.track.images.background} alt="artist avatar"></img>
-          <a href={musics.track.url} target='_blank'> Click here to hear song </a>
+          <a href={musics.track.url} target='_blank' rel='noopener noreferrer'> Click here to hear song </a>
+          <hr/>
         </div>})}
 
     </div>
