@@ -54,7 +54,7 @@ const Music = () => {
     <div>
 
       <Container>
-        <h2> Welcome to the lyric finder, type in atleast 5 sentences of a song and a list of possible songs will be displayed starting with the top being the most likely song that you are looking for</h2>
+        <h2>Got a song stuck in your head? Go ahead and type in atleast 5 sentences from the lyrics of a song and a list of possible songs will be displayed starting with the top being the most likely song that you are looking for</h2>
       <Form onSubmit={handleSubmit}>
         <Form.Control as="textarea"
           value={lyric}
