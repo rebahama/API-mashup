@@ -11,7 +11,7 @@ const NavBar = () => {
     <Navbar bg="primary" className={`${styles.NavBar}`}  variant="dark" expand="lg">
     
     <NavLink to="/"  className={styles.NavLink}>
-    <Navbar.Brand className={`"ml-auto" ${styles.BrandLogo}`}> API </Navbar.Brand>
+    <Navbar.Brand className={`"ml-auto" ${styles.BrandLogo}`}> Music&Movie </Navbar.Brand>
     </NavLink>
 
     <Container>

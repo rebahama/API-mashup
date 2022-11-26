@@ -5,22 +5,26 @@ import imagemusic from '../assets/music.mp4'
 import {
   NavLink
 } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel';
 
 
 
 const HomePage = () => {
   return (
-    <Container>
+    <Container fluid>
+      <Row>
+        <Col md={12} className={styles.HeroImage}>
+        </Col>
+      </Row>
       <h1> Movie and music searcher</h1>
-      <hr/>
+      <hr className={styles.hrLine}/>
       <h2> Welcome on this page you can either search and find info about a movie or try our lyric finder that finds a song based on a couple of sentences</h2>
       <Carousel variant="dark">
         <Carousel.Item>
           <video variant="top" src={image} autoPlay loop muted playsInline> </video>
           <Carousel.Caption>
-          
+
             <NavLink to="/movies" className={styles.MovieBtn} >Movies </NavLink>
           </Carousel.Caption>
         </Carousel.Item>
@@ -33,9 +37,9 @@ const HomePage = () => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-      
+
     </Container>
-   
+
 
   )
 }
