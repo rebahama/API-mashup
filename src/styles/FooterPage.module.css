@@ -3,24 +3,18 @@
 	margin-top: 65vh;
 	right: 0;
 	height: 100px;
-	
 	background-color: #007bff;
-	
-
 }
 .FooterLinks a {
 	color:#f4f4f4;
 }
-
 .Footer li {
 	padding: 20px;
 	color:#f4f4f4;
-	
 }
 .Footer li:hover{
-	z-index: -10;
-	-ms-transform: scale(1.5); /* IE 9 */
-  -webkit-transform: scale(1.5); /* Safari 3-8 */
+   z-index: -10;
+  -ms-transform: scale(1.5); 
+  -webkit-transform: scale(1.5);
   transform: scale(1.5); 
-	
 }

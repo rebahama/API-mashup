@@ -1,4 +1,4 @@
-.MovieBtn{
+.MovieBtn {
     background-color: #008CBA;
     border: none;
     color: white;
@@ -9,8 +9,7 @@
     display: inline-block;
     font-size: 16px;
 }
-.MusicBtn{
-
+.MusicBtn {
     background-color: #4CAF50;
     border: none;
     color: white;
@@ -20,9 +19,8 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-
 }
-.HeroImage{
+.HeroImage {
     max-width: 100%;
     background-image: url('../assets/smile.jpg');
     background-repeat: no-repeat;
@@ -31,6 +29,6 @@
     background-position: center;
 
 }
-.hrLine{
+.hrLine {
     border-top:3px solid #f10000;
 }

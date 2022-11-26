@@ -1,4 +1,4 @@
-.DetailContainer{
+.DetailContainer {
     display: flex;
     flex-direction: column;
     margin-top: 2%;
@@ -6,12 +6,12 @@
 .RatingContainer {
     display: flex;
 }
-.DetailInfoContainer{
+.DetailInfoContainer {
     display: flex;
     padding: 20px;
     flex-direction: column;
     align-items: flex-start;
 }
-.DescribeText{
+.DescribeText {
     padding: 50px;
 }
