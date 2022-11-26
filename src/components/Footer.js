@@ -6,9 +6,11 @@ const Footer = () => {
     <div className={styles.Footer}>
 
                   <ul className={styles.FooterLinks}>
+                    
                         <li className="list-inline-item"><a href="https://sv-se.facebook.com/" target="_blank"rel=" noopener noreferrer"> Facebook </a></li>
                         <li className="list-inline-item"><a href="https://www.instagram.com/" target="_blank" rel=" noopener noreferrer"> Instagram</a></li>
                         <li className="list-inline-item"><a href="https://twitter.com/?lang=sv" target="_blank" rel="noopener noreferrer"> Twitter</a></li>
+                        <p> Created by Rebas Ahmad</p>
                   </ul>
                   
             </div>

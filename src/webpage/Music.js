@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import styles from '../styles/MusicPage.module.css';
 import axios from 'axios';
 import { Container, Form, Button } from 'react-bootstrap';

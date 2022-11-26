@@ -10,7 +10,7 @@ import Music from './webpage/Music';
 
 function App() {
   return (
-    
+    <React.StrictMode> 
     <div className={styles.App}>
      <NavBar/>
      <Routes>
@@ -21,7 +21,7 @@ function App() {
      </Routes>
      <Footer/>
     </div>
-    
+    </React.StrictMode> 
   );
 }
 
