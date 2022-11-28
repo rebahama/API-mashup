@@ -18,7 +18,7 @@ const Music = () => {
     url: 'https://shazam.p.rapidapi.com/search',
     params: { term: lyric, locale: 'en-US', offset: '0', limit: '5' },
     headers: {
-      'X-RapidAPI-Key': '77677621eamshcb48954032d980dp1e8fc7jsn8735e2ae11b4',
+      'X-RapidAPI-Key': '287e8c27a4msh78acdca733c3af2p13858ejsnd551110e95c8',
       'X-RapidAPI-Host': 'shazam.p.rapidapi.com'
     }
   };
@@ -36,6 +36,7 @@ const Music = () => {
       event.preventDefault();
       axios.request(options).then(function (response) {
         SetMusic(response.data.tracks.hits);
+        console.log(response.status)
 
       }).catch(function (error) {
 
