@@ -37,6 +37,7 @@ const Music = () => {
       axios.request(options).then(function (response) {
         SetMusic(response.data.tracks.hits);
         console.log(response.status)
+        console.log(response.status)
 
       }).catch(function (error) {
 
