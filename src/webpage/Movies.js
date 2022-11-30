@@ -28,7 +28,7 @@ const Movies = () => {
       }
     };
     setLoaded(false);
-
+   
     const timer = setTimeout(() => {
       handleData();
 
@@ -51,6 +51,7 @@ const Movies = () => {
         </Container>
         <p> </p>
       </Form>
+      {query.length > 0 ? <p> {error}</p>:""}
       {loaded ? (
         <>
           <div className={styles.grid}> {movies && movies.map((movie) => {
@@ -59,7 +60,7 @@ const Movies = () => {
           </div>
         </>) : (<SpinnerBar />)}
 
-      <p> {error}</p>
+      
       <p> Found: {movies && movies.length > 0 ? movies.length : "0"} </p>
     </div>
   )
