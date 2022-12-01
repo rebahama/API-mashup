@@ -61,6 +61,7 @@ const Music = () => {
         <h2>Got a song stuck in your head? Go ahead and type in atleast 5 sentences from the lyrics of a song and a list of possible songs will be displayed starting with the top being the most likely song that you are looking for</h2>
         <Form onSubmit={handleSubmit}>
           <Form.Control as="textarea"
+            placeholder= "Search a song"
             value={lyric}
             onChange={(e) => setLyrics(e.target.value)}
           />
