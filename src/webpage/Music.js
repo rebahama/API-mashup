@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '../styles/MusicPage.module.css';
 import axios from 'axios';
 import { Container, Form, Button } from 'react-bootstrap';
@@ -35,13 +35,19 @@ const Music = () => {
     else if (lyric !== "") {
       event.preventDefault();
       axios.request(options).then(function (response) {
+       
         SetMusic(response.data.tracks.hits);
+        
         console.log(response.status)
-        console.log(response.status)
+        if(response.status===200){
+          alert("found songs")
+        }
+        console.log(response.data.tracks.hits)
+        
 
       }).catch(function (error) {
 
-        console.error(error);
+        console.log(error);
       });
     }
   }
@@ -63,8 +69,11 @@ const Music = () => {
         </Form>
       </Container>
       <p> Found: {music.length} songs </p>
-
-      {music.map((musics) => {
+      
+        
+      {music.length>0
+      
+      ? music.map((musics) => {
 
         return <div key={musics.track.key} className={styles.ArtistContainer}>
 
@@ -75,7 +84,7 @@ const Music = () => {
           <a href={musics.track.url} target='_blank' rel='noopener noreferrer'> Click here to hear song </a>
           <hr />
         </div>
-      })}
+      }):"No songs matching your search word"}
 
     </div>
   )
