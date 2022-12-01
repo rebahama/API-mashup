@@ -16,12 +16,13 @@ const MovieProps = (props) => {
             <Card className={styles.CardStyles}>
                 <video variant="top" src={image} autoPlay loop muted playsInline className={styles.VideoStyle}> </video>
                 <Card.Body>
-                    <Card.Title>{Title} {Year}</Card.Title>
+                    <Card.Title >{Title} {Year}</Card.Title>
                     <Card.Text>
                         <a href={` https://www.imdb.com/title/${imdbID}`} target="_blanc">Read more on imdb</a>
                     </Card.Text>
                 </Card.Body>
                 <Link to={`/moviedetails/${imdbID}`}> View more</Link>
+                
             </Card>
         </div>
     }
@@ -35,7 +36,7 @@ const MovieProps = (props) => {
                     <Card.Text>
                     </Card.Text>
                 </Card.Body>
-                <Link to={`/moviedetails/${imdbID}`}> View more</Link>
+                <Link to={`/moviedetails/${imdbID}`} className={styles.viewMore}> View more</Link>
             </Card>
         </div>
     }

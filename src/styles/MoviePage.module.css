@@ -17,3 +17,6 @@
 .VideoStyle {
     width: 100%;
 }
+.viewMore:hover {
+   background-color: red;
+}
