@@ -11,7 +11,7 @@ const Music = () => {
 
   const [music, SetMusic] = useState([]);
   const [lyric, setLyrics] = useState("");
-
+const [error, setError]=useState("")
 
   const options = {
     method: 'GET',
@@ -37,7 +37,7 @@ const Music = () => {
       axios.request(options).then(function (response) {
         console.log(response.status)
         if(!response.data.tracks||!response.data.tracks.hits){
-          return alert("found songs")
+          return setError("Not found try again")
         }
         else if(response.status===200){
           console.log(response.data.tracks.hits)
@@ -68,8 +68,7 @@ const Music = () => {
         </Form>
       </Container>
       <p> Found: {music.length} songs </p>
-      
-        
+
       {music.length>0
       
       ? music.map((musics) => {
@@ -83,7 +82,7 @@ const Music = () => {
           <a href={musics.track.url} target='_blank' rel='noopener noreferrer'> Click here to hear song </a>
           <hr />
         </div>
-      }):"No songs matching your search word"}
+      }):<p>{error}</p>}
 
     </div>
   )
