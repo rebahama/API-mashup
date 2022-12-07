@@ -37,7 +37,8 @@ const [error, setError]=useState("")
       axios.request(options).then(function (response) {
         console.log(response.status)
         if(!response.data.tracks||!response.data.tracks.hits){
-          return setError("Not found try again")
+          setError("Song not found please try again")
+          SetMusic([])
         }
         else if(response.status===200){
           console.log(response.data.tracks.hits)
