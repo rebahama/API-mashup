@@ -35,16 +35,14 @@ const Music = () => {
     else if (lyric !== "") {
       event.preventDefault();
       axios.request(options).then(function (response) {
-       
-        SetMusic(response.data.tracks.hits);
-        
         console.log(response.status)
-        if(response.status===200){
-          alert("found songs")
+        if(!response.data.tracks||!response.data.tracks.hits){
+          return alert("found songs")
         }
-        console.log(response.data.tracks.hits)
-        
-
+        else if(response.status===200){
+          console.log(response.data.tracks.hits)
+          SetMusic(response.data.tracks.hits);
+        }
       }).catch(function (error) {
 
         console.log(error);
