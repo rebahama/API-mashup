@@ -31,7 +31,7 @@ const Music = () => {
       setIsLoading(true);
       axios
         .request(options)
-        .then(function(response) {
+        .then(function (response) {
           console.log(response.status);
           if (!response.data.tracks || !response.data.tracks.hits) {
             setError("Song not found please try again");
@@ -42,7 +42,7 @@ const Music = () => {
           }
           setIsLoading(false);
         })
-        .catch(function(error) {
+        .catch(function (error) {
           console.log(error);
           setIsLoading(false);
         });
@@ -91,8 +91,7 @@ const Music = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {" "}
-                    Click here to hear song{" "}
+                    Click here to hear song
                   </a>
                   <hr />
                 </div>
