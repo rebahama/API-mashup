@@ -8,6 +8,7 @@ import MovieDetail from "./webpage/MovieDetail";
 import Movies from "./webpage/Movies";
 import Music from "./webpage/Music";
 
+
 function App() {
   return (
     <React.StrictMode>

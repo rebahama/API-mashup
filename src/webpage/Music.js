@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "../styles/MusicPage.module.css";
 import axios from "axios";
 import SpinnerBar from "../components/SpinnerBar";
-import { Container, Form, Button } from "react-bootstrap";
+import { Container, Form, Button, Row, Col } from "react-bootstrap";
 
 const Music = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -25,7 +25,7 @@ const Music = () => {
       alert("Please type something in the field");
     }
     if (lyric.length > 100) {
-      alert("Maximum 100 charachters please");
+      alert("Maximum 100 characters");
     } else if (lyric !== "") {
       event.preventDefault();
       setIsLoading(true);
@@ -51,7 +51,12 @@ const Music = () => {
 
   return (
     <div>
-      <Container>
+      <Container fluid>
+      <Row>
+        <Col md={12} className={styles.HeroImage}></Col>
+      </Row>
+      <h2> Lyricfinder</h2>
+      <hr className={styles.hrLine} />
         <h2>
           Got a song stuck in your head? Go ahead and type in atleast 5
           sentences from the lyrics of a song and a list of possible songs will
