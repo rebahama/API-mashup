@@ -24,3 +24,13 @@ textarea {
 .hrLine {
     border-top:3px solid #f10000;
 }
+.SearchSong {
+  width: 500px;
+  height: 200px;
+  
+}
+.ContainerSearch {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}

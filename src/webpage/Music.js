@@ -52,19 +52,21 @@ const Music = () => {
   return (
     <div>
       <Container fluid>
-      <Row>
-        <Col md={12} className={styles.HeroImage}></Col>
-      </Row>
-      <h2> Lyricfinder</h2>
-      <hr className={styles.hrLine} />
+        <Row>
+          <Col md={12} className={styles.HeroImage}></Col>
+        </Row>
+        <h2> Lyricfinder</h2>
+        <hr className={styles.hrLine} />
         <h2>
           Got a song stuck in your head? Go ahead and type in atleast 5
           sentences from the lyrics of a song and a list of possible songs will
           be displayed starting with the top being the most likely song that you
           are looking for
         </h2>
+        <div className={styles.ContainerSearch}>
         <Form onSubmit={handleSubmit}>
           <Form.Control
+            className={styles.SearchSong}
             as="textarea"
             placeholder="Search a song"
             value={lyric}
@@ -73,6 +75,7 @@ const Music = () => {
           <p> {lyric.length}/100</p>
           <Button type="submit"> Search</Button>
         </Form>
+        </div>
       </Container>
       {isLoading ? (
         <SpinnerBar />

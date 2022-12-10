@@ -43,7 +43,7 @@ const Movies = () => {
           <Form.Control
             type="text"
             className={styles.SearchBar}
-            placeholder="Search a review"
+            placeholder="Search a movie"
             value={query}
             onChange={(event) => setQuery(event.target.value)}
           />
