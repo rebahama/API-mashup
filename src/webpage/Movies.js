@@ -6,7 +6,6 @@ import SpinnerBar from "../components/SpinnerBar";
 import MovieProps from "./MovieProps";
 
 const Movies = () => {
-
   const axiosReq = axios.create();
   const [loaded, setLoaded] = useState(false);
   const [query, setQuery] = useState("revenant");
@@ -20,6 +19,10 @@ const Movies = () => {
         const { data } = await axiosReq.get(baseUrl);
         setMovies(data.Search);
         setError(data.Error);
+
+        if (data.Error === "Incorrect IMDb ID.") {
+          setError("");
+        }
         setLoaded(true);
       } catch (err) {
         console.log(err);
@@ -66,7 +69,6 @@ const Movies = () => {
       <p> Found: {movies && movies.length > 0 ? movies.length : "0"} </p>
     </div>
   );
-
 };
 
 export default Movies;
