@@ -33,3 +33,12 @@
 hr{
     color: #008CBA;
 }
+.HeroImage {
+    max-width: 100%;
+    background-image: url('../assets/film.jpg');
+    background-repeat: no-repeat;
+    height: 400px;
+    padding: 300px;
+    background-size: cover;
+    background-position: center;
+}

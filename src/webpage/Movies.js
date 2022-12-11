@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "../styles/MoviePage.module.css";
-import { Container, Form } from "react-bootstrap";
+import { Col, Container, Form, Row } from "react-bootstrap";
 import SpinnerBar from "../components/SpinnerBar";
 import MovieProps from "./MovieProps";
 
@@ -41,8 +41,19 @@ const Movies = () => {
 
   return (
     <div>
-      <Form onSubmit={(event) => event.preventDefault()}>
-        <Container>
+      <Container fluid>
+      <Row>
+        <Col md={12} className={styles.HeroImage}></Col>
+      </Row>
+      <h2> Lyricfinder</h2>
+      <hr className={styles.hrLine} />
+      <h2>
+        Got a movie in mind? Type the move in the search bar below and read
+        about your movie!
+      </h2>
+      </Container>
+      <Container>
+        <Form onSubmit={(event) => event.preventDefault()}>
           <Form.Control
             type="text"
             className={styles.SearchBar}
@@ -50,9 +61,10 @@ const Movies = () => {
             value={query}
             onChange={(event) => setQuery(event.target.value)}
           />
-        </Container>
-        <p> </p>
-      </Form>
+
+          <p> </p>
+        </Form>
+      </Container>
       {query.length > 0 ? <p> {error}</p> : ""}
       {loaded ? (
         <>
