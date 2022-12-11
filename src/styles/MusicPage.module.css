@@ -34,3 +34,18 @@ textarea {
     justify-content: center;
     padding: 20px;
 }
+@media screen and (max-width: 770px) {
+
+    .SearchSong{
+        width: 200px;
+        height: 60px;
+    }
+    .ArtistAvatar{
+        max-height: 240px;
+    }
+
+
+
+}
+
+

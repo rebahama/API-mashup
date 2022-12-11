@@ -16,6 +16,9 @@ const NavBar = () => {
           Music&Movie
         </Navbar.Brand>
       </NavLink>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="ml-auto text-left">
       <Container>
         <Nav className="me-auto">
           <NavLink to="/" className={styles.NavLink}>
@@ -29,6 +32,8 @@ const NavBar = () => {
           </NavLink>
         </Nav>
       </Container>
+      </Nav>
+      </Navbar.Collapse>
     </Navbar>
   );
 };
