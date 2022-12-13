@@ -19,10 +19,10 @@ const Movies = () => {
         const { data } = await axiosReq.get(baseUrl);
         setMovies(data.Search);
         setError(data.Error);
-
         if (data.Error === "Incorrect IMDb ID.") {
           setError("");
         }
+       
         setLoaded(true);
       } catch (err) {
         console.log(err);
@@ -65,7 +65,7 @@ const Movies = () => {
           <p> </p>
         </Form>
       </Container>
-      {query.length > 0 ? <p> {error}</p> : ""}
+      {loaded ? <p>{error}</p>:  ""}
       {loaded ? (
         <>
           <div className={styles.grid}>
