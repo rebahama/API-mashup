@@ -45,7 +45,7 @@ const Movies = () => {
       <Row>
         <Col md={12} className={styles.HeroImage}></Col>
       </Row>
-      <h2> Lyricfinder</h2>
+      <h2> Movie database</h2>
       <hr className={styles.hrLine} />
       <h2>
         Got a movie in mind? Type the move in the search bar below and read
